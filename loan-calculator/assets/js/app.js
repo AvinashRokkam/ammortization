@@ -56,7 +56,7 @@ var handler = function() {
         row += '<td>' + m + '</td>';
         row += '<td>' + paymentAmount.toFixed(2).replace(/(\d)(?=(\d{3})+\.\d\d$)/g, "$1,") + '</td>';
         row += '<td>' + toprincipal.toFixed(2).replace(/(\d)(?=(\d{3})+\.\d\d$)/g, "$1,") + '</td>';
-        row += '<td>' + intertestRate + '% </td>';
+        row += '<td>' + intertestRate + '</td>';
         row += '<td>' + balance.toFixed(2).replace(/(\d)(?=(\d{3})+\.\d\d$)/g, "$1,") + '</td>';
         row += '</tr>';
 
