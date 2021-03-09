@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ammortization Calculator</title>
+    <link rel="stylesheet" href="assets/css/foundation.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
+    <link rel="stylesheet" href="/assets/css/app.css">
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="grid-x grid-padding-x">
+            <div class="large-12 cell">
+                <h4 style="text-align: center;">Equal Total Payments Loan Schedule Calculator</h4>
+            </div>
+        </div>
+
+        <div class="grid-x grid-padding-x">
+            <div class="large-12 cell">
+                <div class="callout">
+                    <div class="grid-x grid-padding-x">
+                        <div class="large-3 medium-3 cell">
+                            <label>Loan Amount
+                            <input type="text" placeholder="Loan Amount" id="principal">
+                          </label>
+                        </div>
+                        <div class="large-3 medium-3 cell">
+                            <label>Interest Rate %
+                            <input type="text" placeholder="Annual Interest Rate" id="interest">
+                          </label>
+                        </div>
+                        <div class="large-3 medium-3 cell">
+                            <label>Loan Period
+                            <input type="text" placeholder="Loan Period in Months" id="months">
+                          </label>
+                        </div>
+                        <div class="large-3 medium-3 cell">
+                            <label>Calculate</label>
+                            <a class="button small medium-down-expanded" id="btn_calculate">Calculate</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <table class="hover hide" id="tbl_result">
+            <thead>
+                <tr>
+                    <th width="200">Payment No</th>
+                    <th width="200">Payment Amount</th>
+                    <th width="200">Principal Amount Paid</th>
+                    <th width="200">Interest Amount Paid</th>
+                    <th width="200">Loan Outstanding Balance</th>
+                </tr>
+            </thead>
+            <tbody id="tbl_body">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="assets/js/vendor.js"></script>
+    <script src="assets/js/foundation.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="/assets/js/app.js"></script>
+
+</body>
+
+</html>
