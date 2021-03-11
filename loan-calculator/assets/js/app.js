@@ -28,7 +28,6 @@ var handler = function() {
     // A = Number(document.getElementById('principal').value) = principal
     // N = Number(document.getElementById('months').value); = months
 
-
     var payment = rnd(principal * (i + i / (Math.pow(1 + i, months) - 1)));
 
     // print total payments on console
@@ -41,7 +40,7 @@ var handler = function() {
     var balance = principal;
     var totalinterest = 0;
     var paymentAmount;
-    var intertestRate;
+    var intertestAmount;
 
     // looping through the data to aid populating the table
     for (m = 1; m < months; m++) {
@@ -49,14 +48,14 @@ var handler = function() {
         totalinterest = rnd(totalinterest + tointerest);
         var toprincipal = rnd(payment - tointerest);
         balance = rnd(balance - toprincipal);
-        paymentAmount = rnd(payment / months);
-        intertestRate = rnd(totalinterest / months);
+        paymentAmount = payment; // payment amount
+        intertestAmount = rnd(paymentAmount - toprincipal); // difference between payment amount and interest
 
         var row = '<tr>';
         row += '<td>' + m + '</td>';
         row += '<td>' + paymentAmount.toFixed(2).replace(/(\d)(?=(\d{3})+\.\d\d$)/g, "$1,") + '</td>';
         row += '<td>' + toprincipal.toFixed(2).replace(/(\d)(?=(\d{3})+\.\d\d$)/g, "$1,") + '</td>';
-        row += '<td>' + intertestRate + '</td>';
+        row += '<td>' + intertestAmount.toFixed(2).replace(/(\d)(?=(\d{3})+\.\d\d$)/g, "$1,") + '</td>';
         row += '<td>' + balance.toFixed(2).replace(/(\d)(?=(\d{3})+\.\d\d$)/g, "$1,") + '</td>';
         row += '</tr>';
 
